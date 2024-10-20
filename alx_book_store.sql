@@ -20,9 +20,9 @@ CREATE TABLE Books (
 
 -- Create Customers table
 CREATE TABLE Customers (
-    customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(215) NOT NULL,
-    email VARCHAR(215) NOT NULL UNIQUE,
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(215),
+    email VARCHAR(215),
     address TEXT
 );
 
