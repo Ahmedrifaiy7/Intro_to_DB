@@ -27,6 +27,16 @@ def create_database():
             cursor.close()
             connection.close()
             print("MySQL connection closed.")
+def check_for_describe(file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+        if 'DESCRIBE' in content.upper():  # Check case-insensitively
+            print("Error: The 'DESCRIBE' keyword should not be used.")
+        else:
+            print("The script does not use the 'DESCRIBE' keyword.")
+
+# Call the function with the path to your SQL file
+check_for_describe('task_4.sql')
 
 # Calling the function to create the database
 if __name__ == "__main__":
